@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(MainActivity.this, Menu.class);
-                MainActivity.this.startActivity(mainIntent);
+                Intent homeIntent = new Intent(getApplicationContext(), Home.class);
+                MainActivity.this.startActivity(homeIntent);
                 MainActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
