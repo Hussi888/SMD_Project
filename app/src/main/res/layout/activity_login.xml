@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
@@ -11,9 +17,10 @@
         android:id="@+id/sign_in_logo"
         android:layout_width="wrap_content"
         android:layout_height="279dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/simple_logo"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,9 +40,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="266dp"
-        android:layout_height="79dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="269dp"
+        android:layout_height="56dp"
         android:layout_marginTop="108dp"
+        android:textColorHint="@color/white"
         app:boxStrokeColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -48,9 +57,7 @@
             android:layout_marginTop="100dp"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:textColorHighlight="@color/colorPrimary"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/login_label" />
@@ -58,41 +65,65 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_layout_sign_in"
-        android:layout_width="266dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="216dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="188dp"
+        android:textColorHint="@color/white"
         app:boxStrokeColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_logo">
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_height="43dp"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColor="@color/colorPrimary"
-            android:textColorHighlight="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary" />
-
+            android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="266dp"
         android:layout_height="60dp"
-        android:layout_marginTop="592dp"
+        android:layout_marginTop="548dp"
         android:background="@color/colorPrimary"
-        android:text="Submit"
-        android:textSize="24dp"
         android:fontFamily="@font/roboto_regular"
+        android:text="Submit"
         android:textAllCaps="true"
         android:textColor="@color/colorAccent"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/sign_in_logo" />
 
+    <TextView
+        android:id="@+id/not_a_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="652dp"
+        android:text="Not a member?"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_up_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="652dp"
+        android:clickable="true"
+        android:onClick="sign_up_page"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

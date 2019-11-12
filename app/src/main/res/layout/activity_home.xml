@@ -23,7 +23,6 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:boxStroke="#FFFF"
             android:hint="Name"
             app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
