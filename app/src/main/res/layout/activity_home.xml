@@ -11,8 +11,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="332dp"
-        android:layout_height="70dp"
+        android:layout_width="266dp"
+        android:layout_height="79dp"
         app:boxStrokeColor="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +23,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:boxStroke="#FFFF"
             android:hint="Name"
             app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
