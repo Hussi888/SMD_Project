@@ -17,12 +17,11 @@
 
     <ImageView
         android:id="@+id/sign_in_logo"
-        android:layout_width="416dp"
-        android:layout_height="225dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="283dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="88dp"
         android:src="@drawable/simple_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,14 +29,14 @@
         android:id="@+id/login_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/montserratblack"
-        android:text="@string/sign_in_heading"
-        android:textColor="@color/colorPrimary"
-        android:textSize="50sp"
         android:gravity="center_horizontal"
+        android:text="@string/log_in_heading"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_logo" />
 
@@ -91,7 +90,7 @@
         android:id="@+id/login_button"
         android:layout_width="266dp"
         android:layout_height="60dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="436dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/montserratblack"
         android:onClick="proceed"
@@ -104,42 +103,42 @@
         app:layout_constraintTop_toTopOf="@+id/sign_in_logo" />
 
     <TextView
-        android:id="@+id/not_a_member"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="652dp"
-        android:text="@string/not_member"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.364"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/sign_up_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="652dp"
+        android:layout_marginTop="20dp"
         android:clickable="true"
         android:onClick="sign_up_page"
         android:text="@string/sign_up"
         android:textColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
+    <TextView
+        android:id="@+id/not_a_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/not_member"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
     <TextView
         android:id="@+id/forgot_password_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="684dp"
-        android:textColor="@color/red"
+        android:layout_marginTop="8dp"
         android:clickable="true"
         android:onClick="forgot_password_page"
         android:text="@string/forgot_password"
+        android:textColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/not_a_member" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

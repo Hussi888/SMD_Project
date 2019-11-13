@@ -16,27 +16,29 @@
 
             <ImageView
                 android:id="@+id/sign_in_logo"
-                android:layout_width="416dp"
-                android:layout_height="235dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="304dp"
+                android:layout_height="165dp"
+                android:layout_marginTop="52dp"
                 android:src="@drawable/simple_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/login_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserratblack"
+                android:gravity="center_horizontal"
                 android:text="@string/sign_up_heading"
                 android:textColor="@color/colorPrimary"
-                android:textSize="50sp"
-                android:gravity="center_horizontal"
+                android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sign_in_logo" />
 
@@ -108,7 +110,7 @@
                 android:id="@+id/login_button"
                 android:layout_width="266dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="588dp"
+                android:layout_marginTop="32dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/montserratblack"
                 android:onClick="proceed"
@@ -117,35 +119,35 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.524"
+                app:layout_constraintHorizontal_bias="0.51"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/sign_in_logo" />
+                app:layout_constraintTop_toBottomOf="@+id/ttt" />
 
             <TextView
                 android:id="@+id/not_a_member"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="696dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/already"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.366"
+                app:layout_constraintHorizontal_bias="0.401"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
             <TextView
                 android:id="@+id/sign_up_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="696dp"
+                android:layout_marginTop="20dp"
                 android:clickable="true"
                 android:onClick="sign_in_page"
                 android:text="@string/sign_in"
                 android:textColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.696"
+                app:layout_constraintHorizontal_bias="0.674"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
