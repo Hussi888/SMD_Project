@@ -13,15 +13,11 @@ public class Singup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singup);
     }
-
     public void sign_in_page(View view)
     {
         startActivity(new Intent(this,Login.class));
     }
-    public void proceed(View view)
-    {
-        startActivity(new Intent(this,Home.class));
-    }
+    public void proceed(View view) { startActivity(new Intent(this,Home.class)); }
 
 
 }
