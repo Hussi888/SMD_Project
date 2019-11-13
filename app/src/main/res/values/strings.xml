@@ -2,5 +2,14 @@
     <string name="app_name">Aches!</string>
     <string name="password">PASSWORD</string>
     <string name="email">EMAIL</string>
-    <string name="sign_up"><u> SIGN UP</u></string>
+    <string name="forgot_password"><u><i>Forgotten password?</i></u></string>
+    <string name="sign_up"><u><i> SIGN UP</i></u></string>
+    <string name="sign_in"><u><i> SIGN IN</i></u></string>
+    <string name="already">Already a member?</string>
+    <string name="not_member">Not a member?</string>
+    <string name="submit">SUBMIT</string>
+    <string name="sign_up_heading">SIGN UP</string>
+    <string name="sign_in_heading">SIGN IN</string>
+    <string name="name">NAME</string>
+    <string name="password_help">Find Your Account?</string>
 </resources>

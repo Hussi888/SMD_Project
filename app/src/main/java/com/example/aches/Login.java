@@ -12,9 +12,14 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
     }
     public void sign_up_page(View view)
     {
         startActivity(new Intent(this,Singup.class));
+    }
+    public void forgot_password_page(View view)
+    {
+        startActivity(new Intent(this,ForgotPassword.class));
     }
 }
