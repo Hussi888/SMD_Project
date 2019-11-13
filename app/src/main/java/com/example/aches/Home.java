@@ -14,7 +14,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-      //startActivity(new Intent(this,Login.class));
+      startActivity(new Intent(this,Login.class));
                 RecyclerView home_wall_data=findViewById(R.id.home_view);
                 home_wall_data.setLayoutManager(new LinearLayoutManager(this));
                 String [] data={"Past Papers","Books","Others"};
