@@ -32,7 +32,7 @@
             android:layout_width="385dp"
             android:layout_height="109dp"
             android:layout_marginTop="12dp"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/montserratblack"
             android:gravity="center_horizontal"
             android:text="@string/app_name"
             android:textColor="@color/colorPrimary"
