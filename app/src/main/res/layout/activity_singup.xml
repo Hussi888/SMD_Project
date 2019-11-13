@@ -15,15 +15,15 @@
             tools:context=".Singup">
 
             <ImageView
-                    android:id="@+id/sign_in_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="279dp"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/simple_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/sign_in_logo"
+                android:layout_width="416dp"
+                android:layout_height="235dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/simple_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/login_label"
@@ -108,12 +108,12 @@
                 android:id="@+id/login_button"
                 android:layout_width="266dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="612dp"
+                android:layout_marginTop="588dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/roboto_regular"
+                android:onClick="proceed"
                 android:text="@string/submit"
                 android:textAllCaps="true"
-                android:onClick="proceed"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"

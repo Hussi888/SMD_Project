@@ -76,9 +76,11 @@
             android:layout_marginTop="548dp"
             android:paddingTop="18dp"
             android:paddingBottom="18dp"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:textAllCaps="true"
             android:textSize="24sp"
+            android:clickable="true"
+            android:onClick="sign_in_page"
             android:background="@color/colorPrimary"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +96,9 @@
             android:paddingBottom="18dp"
             android:gravity="center_horizontal"
             android:textAllCaps="true"
-            android:text="Sign up"
+            android:clickable="true"
+            android:onClick="sign_up_page"
+            android:text="@string/sign_up"
             android:textSize="24sp"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
@@ -102,6 +106,5 @@
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

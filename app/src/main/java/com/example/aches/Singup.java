@@ -20,7 +20,7 @@ public class Singup extends AppCompatActivity {
     }
     public void proceed(View view)
     {
-        startActivity(new Intent(this,Welcome.class));
+        startActivity(new Intent(this,Home.class));
     }
 
 

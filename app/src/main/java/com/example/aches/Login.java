@@ -22,4 +22,8 @@ public class Login extends AppCompatActivity {
     {
         startActivity(new Intent(this,ForgotPassword.class));
     }
+    public void proceed(View view)
+    {
+        startActivity(new Intent(this,Home.class));
+    }
 }
