@@ -17,14 +17,13 @@ public class Home extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflator, @Nullable ViewGroup container, @Nullable Bundle savdInstanceState)
+    public View onCreateView(LayoutInflater inflator, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        View rootView= inflator.inflate(R.layout.activity_home,container,false);
-        RecyclerView homeView= (RecyclerView) rootView.findViewById(R.id.home_view);
-        homeView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        String [] data={"Sana","Qazi","all","here"};
-        homeView.setAdapter(new HomeWallAdapter(data));
-    return rootView;
-    }
-
+            View rootView= inflator.inflate(R.layout.activity_home,container,false);
+            RecyclerView homeView= (RecyclerView) rootView.findViewById(R.id.home_view);
+            homeView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+            String [] data={"Sana","Qazi","all","here"};
+            homeView.setAdapter(new HomeWallAdapter(data));
+            return rootView;
+        }
 }

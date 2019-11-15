@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:background="@color/colorBackground"
-    tools:context=".Home"
     >
 
     <androidx.cardview.widget.CardView
@@ -32,8 +31,7 @@
                 android:gravity="center"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
-                android:fontFamily="@font/montserratblack"
-                android:text="who is sana??" />
+                android:fontFamily="@font/montserratblack" />
 
         </LinearLayout>
 

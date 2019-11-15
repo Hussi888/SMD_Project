@@ -17,10 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="24dp"
-            android:background="@color/red"
+            android:background="@color/colorBackground"
             >
 
-<ImageView
+            <ImageView
                 android:id="@+id/display_photo"
                 android:layout_width="124dp"
                 android:layout_height="136dp"
@@ -29,7 +29,7 @@
                 android:layout_marginEnd="146dp"
                 android:gravity="center"
                 android:src="@drawable/ic_launcher_foreground"
-            app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                  />
@@ -45,7 +45,7 @@
                 android:foregroundGravity="center_horizontal"
                 android:gravity="center"
                 android:text="Usman Zahoor"
-                android:textColor="@color/colorBackground"
+                android:textColor="@color/colorPrimary"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
@@ -66,20 +66,19 @@
                 app:layout_constraintHorizontal_bias="0.95"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/a"
             android:layout_width="match_parent"
             android:layout_height="464dp"
-            android:background="@color/colorBackground"
+            android:background="@color/colorPrimary"
             android:visibility="visible">
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
-                android:layout_width="403dp"
-                android:layout_height="143dp"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -88,16 +87,20 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="118dp"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Question Asked" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@color/colorBackground"
+                    android:text="About" />
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
-                android:layout_width="403dp"
-                android:layout_height="143dp"
-                android:layout_marginTop="152dp"
+                android:layout_width="350dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="170dp"
                 android:background="@color/colorBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,24 +108,34 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@color/colorBackground"
                     android:text="Question Asked" />
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView3"
-                android:layout_width="match_parent"
-                android:layout_height="143dp"
-                android:layout_marginTop="304dp"
+                android:layout_width="350dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginBottom="10dp"
                 android:background="@color/colorBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
                 <TextView
+                android:background="@color/colorBackground"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="My answers" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="My answers"
+                    />
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 

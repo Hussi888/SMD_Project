@@ -24,9 +24,10 @@ public class HomeWallAdapter extends RecyclerView.Adapter <HomeWallAdapter.HomeV
 
     @Override
     public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {
-        String value=data[position];
-        holder.q_text_value.setText(value);
-        holder.a_text_value.setText(value);
+        String value = data[position];
+        //  holder.q_text_value.setText(value);
+        // holder.a_text_value.setText(value);
+
     }
 
     @Override
@@ -36,14 +37,17 @@ public class HomeWallAdapter extends RecyclerView.Adapter <HomeWallAdapter.HomeV
 
     public class HomeViewHolder extends RecyclerView.ViewHolder{
 
+
         ImageView image_value;
-        TextView q_text_value;
-        TextView a_text_value;
-        public HomeViewHolder( View itemView) {
+
+        //   TextView q_text_value;
+        //  TextView a_text_value;
+        public HomeViewHolder(View itemView) {
             super(itemView);
-            image_value=itemView.findViewById(R.id.photo);
-            q_text_value=itemView.findViewById(R.id.question);
-            a_text_value=itemView.findViewById(R.id.answer);
-        }
+            image_value = itemView.findViewById(R.id.photo);
+            //  q_text_value=itemView.findViewById(R.id.question);
+            // a_text_value=itemView.findViewById(R.id.answer);
+
+    }
     }
 }

@@ -36,14 +36,15 @@ public class MainScreen extends AppCompatActivity {
                         case R.id.home:
                             selectedFragment = new Home();
                             break;
-
                         case R.id.search:
                             selectedFragment = new category();
+                            break;
+                        case R.id.notification:
+                            selectedFragment = new Notification();
                             break;
                         case R.id.profile:
                             selectedFragment = new Profile();
                             break;
-
                     }
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
                     return true;
