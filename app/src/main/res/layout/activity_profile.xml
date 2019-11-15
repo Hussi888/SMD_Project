@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:background="@color/red"
+            >
+
+<ImageView
+                android:id="@+id/display_photo"
+                android:layout_width="124dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="146dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="146dp"
+                android:gravity="center"
+                android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+
+            <TextView
+                android:id="@+id/name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="208dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/roboto_bold"
+                android:foregroundGravity="center_horizontal"
+                android:gravity="center"
+                android:text="Usman Zahoor"
+                android:textColor="@color/colorBackground"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="76dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorBackground"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:paddingLeft="6dp"
+                android:text="edit"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="464dp"
+            android:background="@color/colorBackground"
+            android:visibility="visible">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="403dp"
+                android:layout_height="143dp"
+                android:background="@color/colorBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp"
+                    android:gravity="center"
+                    android:text="Question Asked" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="403dp"
+                android:layout_height="143dp"
+                android:layout_marginTop="152dp"
+                android:background="@color/colorBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Question Asked" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="match_parent"
+                android:layout_height="143dp"
+                android:layout_marginTop="304dp"
+                android:background="@color/colorBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="My answers" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
