@@ -41,7 +41,7 @@ public class MainScreen extends AppCompatActivity {
                             selectedFragment = new category();
                             break;
                         case R.id.profile:
-                            selectedFragment = new ScrollingActivity();
+                            selectedFragment = new Profile();
                             break;
 
                     }
