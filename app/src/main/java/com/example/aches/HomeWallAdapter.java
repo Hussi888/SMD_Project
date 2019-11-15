@@ -1,5 +1,4 @@
 package com.example.aches;
-
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -9,7 +8,7 @@ package com.example.aches;
         import androidx.annotation.NonNull;
         import androidx.recyclerview.widget.RecyclerView;
 
-public class HomeWallAdapter extends RecyclerView.Adapter <HomeWallAdapter.SubjectViewHolder>{
+public class HomeWallAdapter extends RecyclerView.Adapter <HomeWallAdapter.HomeViewHolder>{
     private String[] data;
     public HomeWallAdapter(String[] data)
     {
@@ -17,14 +16,14 @@ public class HomeWallAdapter extends RecyclerView.Adapter <HomeWallAdapter.Subje
     }
     @NonNull
     @Override
-    public SubjectViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
         View view=inflater.inflate(R.layout.home_data,parent,false);
-        return new SubjectViewHolder(view);
+        return new HomeViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SubjectViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {
         String value=data[position];
         holder.q_text_value.setText(value);
         holder.a_text_value.setText(value);
@@ -35,12 +34,12 @@ public class HomeWallAdapter extends RecyclerView.Adapter <HomeWallAdapter.Subje
         return data.length;
     }
 
-    public class SubjectViewHolder extends RecyclerView.ViewHolder{
+    public class HomeViewHolder extends RecyclerView.ViewHolder{
 
         ImageView image_value;
         TextView q_text_value;
         TextView a_text_value;
-        public SubjectViewHolder( View itemView) {
+        public HomeViewHolder( View itemView) {
             super(itemView);
             image_value=itemView.findViewById(R.id.photo);
             q_text_value=itemView.findViewById(R.id.question);

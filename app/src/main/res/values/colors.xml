@@ -7,5 +7,5 @@
     <color name="white">#ffffff</color>
     <color name="colorBackground">#1b1c1e</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fff</color>
-
+<color name="s">#a23a89</color>
 </resources>
