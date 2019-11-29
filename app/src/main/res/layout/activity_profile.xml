@@ -86,6 +86,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:onClick="About_Page"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"

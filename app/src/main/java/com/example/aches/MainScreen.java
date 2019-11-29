@@ -5,6 +5,9 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,16 +26,16 @@ public class MainScreen extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new Home()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
 
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener=
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                    Fragment selectedFragment=null;
-                    switch(menuItem.getItemId()){
+                    Fragment selectedFragment = null;
+                    switch (menuItem.getItemId()) {
                         case R.id.home:
                             selectedFragment = new Home();
                             break;
@@ -46,15 +49,17 @@ public class MainScreen extends AppCompatActivity {
                             selectedFragment = new Profile();
                             break;
                     }
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                     return true;
+
                 }
 
             };
-    public void home_item_clicked(View view)
-    {
-        startActivity(new Intent(this,Singup.class));
+
+    public void home_item_clicked(View view) {
+        startActivity(new Intent(this, Singup.class));
     }
 
+    public void About_Page(View view) { startActivity(new Intent(this, About.class)); }
 
 }
