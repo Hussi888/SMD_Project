@@ -1,4 +1,4 @@
-package com.example.aches;
+package com.example.aches.Views;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-    public class NotificationAdapter extends RecyclerView.Adapter <com.example.aches.NotificationAdapter.NotificationViewHolder> {
+import com.example.aches.R;
+
+public class NotificationAdapter extends RecyclerView.Adapter <NotificationAdapter.NotificationViewHolder> {
         private String[] data;
 
         public NotificationAdapter(String[] data) {

@@ -1,4 +1,4 @@
-package com.example.aches;
+package com.example.aches.Views;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.aches.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainScreen extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.aches;
+package com.example.aches.Views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.aches.R;
+import com.example.aches.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -21,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Signup extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private FirebaseDatabase mDatabase;
     private static final String TAG = "Signup";
     EditText name;
     EditText email;
@@ -68,8 +71,9 @@ public class Signup extends AppCompatActivity {
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             User currentUser = new User(name.getText().toString(),email_final, password_final);
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            mDatabase = FirebaseDatabase.getInstance();
+                            mDatabase.getReference("Users")
+                                    .child(mAuth.getCurrentUser().getUid())
                                     .setValue(currentUser)
                                      .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

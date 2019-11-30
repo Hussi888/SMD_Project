@@ -1,9 +1,9 @@
-package com.example.aches;
+package com.example.aches.Models;
 
 public class User {
-    String name;
-    String email;
-    String password;
+    public String name;
+    public String email;
+    public String password;
     //Other info of user
     public User(String _name, String _email, String _password) {
         name = _name;

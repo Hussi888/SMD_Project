@@ -1,4 +1,4 @@
-package com.example.aches;
+package com.example.aches.Views;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -6,6 +6,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.aches.R;
 
 public class CategoryAdapter extends RecyclerView.Adapter <CategoryAdapter.CategoryViewHolder>{
         private String[] data;

@@ -9,21 +9,21 @@
         android:roundIcon="@drawable/simple_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".About"></activity>
-        <activity android:name=".Notification" />
-        <activity android:name=".Profile" />
+        <activity android:name=".Views.About"></activity>
+        <activity android:name=".Views.Notification" />
+        <activity android:name=".Views.Profile" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".category" />
-        <activity android:name=".MainScreen" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".Home" />
-        <activity android:name=".Signup" />
-        <activity android:name=".Login" />
-        <activity android:name=".Welcome" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Views.category" />
+        <activity android:name=".Views.MainScreen" />
+        <activity android:name=".Views.ForgotPassword" />
+        <activity android:name=".Views.Home" />
+        <activity android:name=".Views.Signup" />
+        <activity android:name=".Views.Login" />
+        <activity android:name=".Views.Welcome" />
+        <activity android:name=".Views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

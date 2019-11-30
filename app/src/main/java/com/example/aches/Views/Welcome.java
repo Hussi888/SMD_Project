@@ -1,10 +1,12 @@
-package com.example.aches;
+package com.example.aches.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.aches.R;
 
 public class Welcome extends AppCompatActivity {
 

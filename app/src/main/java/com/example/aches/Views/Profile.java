@@ -1,4 +1,4 @@
-package com.example.aches;
+package com.example.aches.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.aches.R;
 
 public class Profile extends Fragment {
 
