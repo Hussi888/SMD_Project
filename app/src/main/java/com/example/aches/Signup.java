@@ -16,34 +16,38 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class Login extends AppCompatActivity {
+public class Signup extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private static final String TAG = "Login";
+    private static final String TAG = "Signup";
+    EditText name;
     EditText email;
     EditText password;
-    Button loginBtn;
+    Button signUpBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_singup);
 
         //XML Initialising
-        email = findViewById(R.id.email_layout_log_in);
-        password = findViewById(R.id.password_layout_log_in);
-        loginBtn = findViewById(R.id.submitBtn_layout_log_in);
+        name = findViewById(R.id.name_layout_sign_up);
+        email = findViewById(R.id.email_layout_sign_up);
+        password = findViewById(R.id.password_layout_sign_up);
+        signUpBtn = findViewById(R.id.submitBtn_layout_sign_up);
 
-        //Firebase Authentication
+        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signIn(email.getText().toString(), password.getText().toString());
+                createAccount(email.getText().toString(), password.getText().toString());
             }
         });
+
     }
     @Override
     public void onStart() {
@@ -52,31 +56,37 @@ public class Login extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
-    public void sign_up_page(View view)
-    {
-        startActivity(new Intent(this, Signup.class));
-    }
-    public void forgot_password_page(View view)
-    {
-        startActivity(new Intent(this,ForgotPassword.class));
-    }
-    public void proceed(View view)
-    {
-        startActivity(new Intent(this,Home.class));
-    }
-    public void signIn(String email, String password) {
-        mAuth.signInWithEmailAndPassword(email, password)
+    public void createAccount(String email, String password) {
+        final String email_final = email;
+        final String password_final = password;
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
+                            Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            User currentUser = new User(name.getText().toString(),email_final, password_final);
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(currentUser)
+                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if  (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Registration Successful.",
+                                                Toast.LENGTH_SHORT).show();
+                                    }
+                                    else
+                                        Toast.makeText(getApplicationContext(), "Registration Failed.",
+                                                Toast.LENGTH_SHORT).show();
+                                }
+                            });
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
                             Toast.makeText(getApplicationContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
@@ -86,6 +96,11 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
+    public void sign_in_page(View view)
+    {
+        startActivity(new Intent(this,Login.class));
+    }
+    public void proceed(View view) { startActivity(new Intent(this,Home.class)); }
     //Change UI according to user data.
     public void  updateUI(FirebaseUser account){
         if(account != null){
@@ -96,4 +111,5 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this,"Log In failed",Toast.LENGTH_LONG).show();
         }
     }
+
 }

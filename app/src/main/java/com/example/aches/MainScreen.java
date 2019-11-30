@@ -5,15 +5,10 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -57,7 +52,7 @@ public class MainScreen extends AppCompatActivity {
             };
 
     public void home_item_clicked(View view) {
-        startActivity(new Intent(this, Singup.class));
+        startActivity(new Intent(this, Signup.class));
     }
 
     public void About_Page(View view) { startActivity(new Intent(this, About.class)); }

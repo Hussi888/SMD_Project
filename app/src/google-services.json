@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "492223963825",
+    "firebase_url": "https://aches-bf876.firebaseio.com",
+    "project_id": "aches-bf876",
+    "storage_bucket": "aches-bf876.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492223963825:android:8754068bd34b95de68f890",
+        "android_client_info": {
+          "package_name": "com.example.aches"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492223963825-vurfrlf88gti70d696uqe79sm1hhef0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZVL-QD0Oo_diV4qk_HgmZ1sayoOsgp3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492223963825-vurfrlf88gti70d696uqe79sm1hhef0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,7 +20,7 @@
         <activity android:name=".MainScreen" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".Home" />
-        <activity android:name=".Singup" />
+        <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
