@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             Toast.makeText(this,"Log In failed",Toast.LENGTH_LONG).show();
-            startActivity(new Intent(getApplicationContext(), Signup.class));
+            startActivity(new Intent(getApplicationContext(), Welcome.class));
         }
     }
 

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
+import com.example.aches.Models.Category;
 import com.example.aches.R;
 /*
 public class category extends AppCompatActivity {
@@ -37,8 +38,8 @@ public class category extends Fragment {
         View rootView= inflator.inflate(R.layout.activity_category,container,false);
         RecyclerView categories=rootView.findViewById(R.id.category_view);
         categories.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        String [] data={"Tech-Aches","Code-Aches","Health-Aches","Beauty-Aches","Food-Aches","Study-Aches","Fashion-Aches","Relationship-Aches","Game-Aches","Vehicle-Aches","Pet-Aches","Plant-Aches","Job-Aches","Parent-Aches","Creative-Aches","Language-Aches","Music-Aches"};
-        categories.setAdapter(new CategoryAdapter(data));
+        Category Categories = Category.getInstance();
+        categories.setAdapter(new CategoryAdapter(Categories.categoriesList));
 
         final SearchView s=(SearchView)rootView.findViewById(R.id.searchView);
         s.setOnClickListener(new View.OnClickListener() {

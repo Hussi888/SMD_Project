@@ -18,7 +18,7 @@ public class Welcome extends AppCompatActivity {
 
     public void sign_in_page(View view)
     {
-        startActivity(new Intent(this,Login.class));
+        startActivity(new Intent(this,MainScreen.class));
     }
 
     public void sign_up_page(View view)

@@ -111,7 +111,7 @@
         android:layout_marginTop="20dp"
         android:clickable="true"
         android:onClick="sign_up_page"
-        android:text="@string/sign_up"
+        android:text="@string/sign_up_heading"
         android:textColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.645"

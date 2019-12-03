@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.AskQuestion">
+
+
+    <TextView
+        android:id="@+id/QuestionText"
+        android:layout_width="361dp"
+        android:layout_height="198dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="What is the question you dare ask?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141">
+
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/AskEdt_layout_ask_question"
+        android:layout_width="367dp"
+        android:layout_height="107dp"
+        android:fontFamily="@font/montserratbold"
+        android:hint="@string/answer_placeholder"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuestionText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/AnswerBtn_layout_ask_question"
+        android:layout_width="286dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="92dp"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:fontFamily="@font/montserratblack"
+        android:gravity="center_horizontal"
+        android:paddingTop="14dp"
+        android:paddingBottom="18dp"
+        android:text="Answer"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AskEdt_layout_ask_question" />
+
+    <ImageView
+        android:id="@+id/inside_imageview"
+        android:layout_width="413dp"
+        android:layout_height="55dp"
+
+        android:src="#1e1e1e"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/outside_imageview"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignLeft="@id/inside_imageview"
+        android:layout_alignTop="@id/inside_imageview"
+        android:layout_alignRight="@id/inside_imageview"
+        android:layout_alignBottom="@id/inside_imageview"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:scaleType="fitXY"
+        android:src="@drawable/cross"
+        app:layout_constraintBottom_toBottomOf="@+id/inside_imageview"
+        app:layout_constraintEnd_toEndOf="@+id/inside_imageview"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inside_imageview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,6 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="forgot_password"><u><i>Forgotten password?</i></u></string>
-    <string name="sign_up"><u><i> SIGN UP</i></u></string>
-    <string name="sign_in"><u><i> SIGN IN</i></u></string>
     <string name="already">Already a member?</string>
     <string name="not_member">Not a member?</string>
     <string name="submit">SUBMIT</string>
@@ -13,6 +11,8 @@
     <string name="name">Name</string>
     <string name="password_help">Find Your Account?</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="question_placeholder">What is on your mind?</string>
+    <string name="answer_placeholder">Write your answer.</string>
     <string name="large_text">
         Let’s Be honest Over here, It’s great phone with top notch camera, Great Software experience and great build quality.
 
@@ -27,4 +27,5 @@ Google Perks, unlimited cloud storage, Google Lens, Fast software updates, Googl
 All those reasons make Google Pixel XL a worthy contender of best Phone of the Year.
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_delete">delete</string>
 </resources>

@@ -144,7 +144,7 @@
                 android:layout_marginTop="20dp"
                 android:clickable="true"
                 android:onClick="sign_in_page"
-                android:text="@string/sign_in"
+                android:text="@string/log_in_heading"
                 android:textColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.674"

@@ -9,11 +9,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.aches.R;
 
 public class Home extends Fragment {
-
 
     @Nullable
     @Override
@@ -25,5 +25,5 @@ public class Home extends Fragment {
             String [] data={"Sana","Qazi","all","here"};
             homeView.setAdapter(new HomeWallAdapter(data));
             return rootView;
-        }
+    }
 }

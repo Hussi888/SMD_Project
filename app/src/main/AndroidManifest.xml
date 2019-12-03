@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/simple_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.About"></activity>
+        <activity android:name=".Views.Answer"></activity>
+        <activity android:name=".Views.AskQuestion" />
+        <activity android:name=".Views.About" />
         <activity android:name=".Views.Notification" />
         <activity android:name=".Views.Profile" />
         <activity
